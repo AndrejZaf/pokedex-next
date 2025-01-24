@@ -29,7 +29,7 @@ const Navbar = () => {
             <Sheet>
                 <SheetTrigger asChild>
                     <Button variant="outline" size="icon" className="md:hidden">
-                        <MenuIcon className="text-white h-6 w-6" />
+                        <MenuIcon className="h-6 w-6" />
                         <span className="sr-only">Toggle navigation menu</span>
                     </Button>
                 </SheetTrigger>
@@ -45,7 +45,7 @@ const Navbar = () => {
                     <div className="grid p-4">
                         {navigation.map((item) =>
                             <Link key={item.label} href={item.href}
-                                  className="transition-all delay-75 uppercase text-lg py-2 font-semibold border-b-4 border-transparent">
+                                  className="transition-all delay-75 text-lg py-2 border-b-4 border-transparent">
                                 <div>
                                     {item.label}
                                 </div>
@@ -59,7 +59,7 @@ const Navbar = () => {
             <div className="hidden md:flex gap-4">
                 {navigation.map((item) =>
                     <Link key={item.label} href={item.href}
-                          className="transition-all delay-75 uppercase text-lg py-2 font-semibold border-b-4 border-transparent">
+                          className="transition-all delay-75 text-lg py-2 border-b-4 border-transparent">
                         <div>
                             {item.label}
                         </div>
