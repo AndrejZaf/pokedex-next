@@ -1,4 +1,6 @@
 import BackButton from "@/components/back-button";
+import KeyCharacteristics from "@/components/pokemon/key-characteristics";
+import { PokemonMoves } from "@/components/pokemon/pokemon-moves";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Pokemon } from "@/types";
@@ -32,7 +34,7 @@ const PokemonPage = async ({ params }: { params: Promise<{ id: string }> }) => {
                     </div>
                 </div>
             </div>
-            <div className="bg-white w-full h-72 rounded-t-3xl mt-[-40px] flex justify-center">
+            <div className="bg-white w-full rounded-t-3xl mt-[-40px] flex justify-center">
                 <Tabs defaultValue="about" className="mt-12">
                     <TabsList className="space-x-72">
                         <TabsTrigger tabColor={colorValues.background} value="about">About</TabsTrigger>
@@ -40,18 +42,10 @@ const PokemonPage = async ({ params }: { params: Promise<{ id: string }> }) => {
                         <TabsTrigger tabColor={colorValues.background} value="moves">Moves</TabsTrigger>
                     </TabsList>
                     <TabsContent value="about">
-                        <>
-                            <div className="text-xl font-semibold">Key Characteristics</div>
-                            <div className="flex">
-                                <div className="habitat flex gap-x-10">
-                                    <div className="label text-lg">Habitat</div>
-                                    <div className="value text-lg">Grassland</div>
-                                </div>
-                            </div>
-                        </>
+                        <KeyCharacteristics />
                     </TabsContent>
                     <TabsContent value="base-stats">Base Stats</TabsContent>
-                    <TabsContent value="moves">Moves</TabsContent>
+                    <TabsContent value="moves"><PokemonMoves pokemon={pokemonData} /></TabsContent>
                 </Tabs>
             </div>
         </>
