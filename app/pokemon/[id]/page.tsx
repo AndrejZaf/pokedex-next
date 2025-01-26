@@ -1,5 +1,6 @@
 import BackButton from "@/components/back-button";
 import { Badge } from "@/components/ui/badge";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Pokemon } from "@/types";
 import { determinePokemonColor } from "@/utils/color.util";
 import { pokemonColor } from "@/utils/pokemon-color.util";
@@ -27,7 +28,17 @@ const PokemonPage = async ({ params }: { params: Promise<{ id: string }> }) => {
                     </div>
                 </div>
             </div>
-            <div className="bg-white w-full h-72 rounded-t-3xl mt-[-40px]">
+            <div className="bg-white w-full h-72 rounded-t-3xl mt-[-40px] flex justify-center">
+                <Tabs defaultValue="about" className="mt-12">
+                    <TabsList className="space-x-44">
+                        <TabsTrigger tabColor={colorValues.background} value="about">About</TabsTrigger>
+                        <TabsTrigger tabColor={colorValues.background} value="base-stats">Base Stats</TabsTrigger>
+                        <TabsTrigger tabColor={colorValues.background} value="moves">Moves</TabsTrigger>
+                    </TabsList>
+                    <TabsContent value="about">About</TabsContent>
+                    <TabsContent value="base-stats">Base Stats</TabsContent>
+                    <TabsContent value="moves">Moves</TabsContent>
+                </Tabs>
             </div>
         </>
     );
