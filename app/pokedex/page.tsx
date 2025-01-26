@@ -1,7 +1,7 @@
 "use client";
 
 import PokemonCard from "@/components/pokemon-card";
-import { Pokemon } from "@/types";
+import { PokemonMinified } from "@/types";
 import { getIndex } from "@/utils/url.util";
 import Link from "next/link";
 import React, { useEffect } from "react";
@@ -37,13 +37,16 @@ const PokedexPage = () => {
 
     return (
         <>
-            <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 p-8">
+            <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mt-8">
                 {data?.map((page) =>
-                    page.results.map((pokemon: Pokemon) => (
-                        <Link key={pokemon.name} href={`/pokemon/${pokemon.name}`}>
-                            <PokemonCard index={getIndex(pokemon.url)} pokemon={pokemon} />
-                        </Link>
-                    )),
+                    page.results.map((pokemon: PokemonMinified) => {
+                        const index = getIndex(pokemon.url);
+                        return (
+                            <Link key={pokemon.name} href={`/pokemon/${index}`}>
+                                <PokemonCard index={index} pokemon={pokemon} />
+                            </Link>
+                        )
+                    }),
                 )}
             </div>
             <div ref={ref}>Load More</div>

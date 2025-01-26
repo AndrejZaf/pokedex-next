@@ -1,11 +1,11 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Pokemon } from "@/types";
+import { PokemonMinified } from "@/types";
 import { determinePokemonColor } from "@/utils/color.util";
 import { pokemonColor } from "@/utils/pokemon-color.util";
 import React from "react";
 
-const PokemonCard = ({ pokemon, index }: { pokemon: Pokemon, index: number }) => {
+const PokemonCard = ({ pokemon, index }: { pokemon: PokemonMinified, index: number }) => {
     const color = pokemonColor[pokemon.name];
     const colorValues = determinePokemonColor(color);
     return (
