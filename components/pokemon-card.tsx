@@ -1,19 +1,25 @@
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Pokemon } from "@/types";
+import { determinePokemonColor } from "@/utils/color.util";
+import { pokemonColor } from "@/utils/pokemon-color.util";
 import React from "react";
 
-const PokemonCard = () => {
+const PokemonCard = ({ pokemon, index }: { pokemon: Pokemon, index: number }) => {
+    const color = pokemonColor[pokemon.name];
+    const colorValues = determinePokemonColor(color);
     return (
-        <Card className="aspect-square">
+        <Card className="aspect-video hover:opacity-75 transition delay-75 duration-150 ease-in-out" style={{ backgroundColor: colorValues.background }}>
             <CardHeader>
-                <CardTitle>Card Title</CardTitle>
-                <CardDescription>Card Description</CardDescription>
+                <CardTitle className="capitalize font-semibold" style={{color: colorValues.badgeTextColor}}>{pokemon.name}</CardTitle>
+                <CardDescription><Badge className="capitalize" style={{backgroundColor: colorValues.badge, color: colorValues.badgeTextColor}}>{color}</Badge></CardDescription>
             </CardHeader>
             <CardContent>
-                <p>Card Content</p>
+                <div className="flex justify-end">
+                    <img alt={pokemon.name} className="w-[70%]"
+                         src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${index}.png`} />
+                </div>
             </CardContent>
-            <CardFooter>
-                <p>Card Footer</p>
-            </CardFooter>
         </Card>
     );
 };
