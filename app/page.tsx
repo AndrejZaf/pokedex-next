@@ -7,7 +7,7 @@ import React from "react";
 export default function Home() {
     return (
         <>
-            <section className="hero mt-2">
+            <section className="hero mt-4">
                 <div
                     className="bg-[url('/pokemon-background.png')] h-[250px] bg-cover bg-no-repeat bg-center flex justify-center items-center flex-col mx-auto space-y-4">
                     <img alt="Pokemon Logo" src="/pokemon-logo.png" className="w-fit" />
