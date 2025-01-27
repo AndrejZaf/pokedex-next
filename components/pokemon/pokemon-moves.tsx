@@ -4,7 +4,7 @@ import React from "react";
 
 export const PokemonMoves = ({ pokemon }: { pokemon: Pokemon }) => {
     return (
-        <Table className="text-md my-4">
+        <Table className="text-md">
             <TableHeader>
                 <TableRow>
                     <TableHead className="font-bold">ID</TableHead>

@@ -13,6 +13,7 @@ export type Pokemon = {
     abilities: PokemonAbility[];
     weight: number;
     height: number;
+    stats: PokemonStat[];
 }
 
 
@@ -70,4 +71,13 @@ export type Ability = {
 
 export type PokemonAbility = {
     ability: Ability;
+}
+
+export type Stat = {
+    name: string;
+}
+
+export type PokemonStat = {
+    base_stat: number;
+    stat: Stat;
 }

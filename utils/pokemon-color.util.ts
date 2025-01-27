@@ -916,4 +916,23 @@ export const pokemonColor: Record<string, string> = {
     runerigus: "gray",
     urshifu: "gray",
     golisopod: "gray",
-}
+};
+
+export const determineStatColor = (statName: string) => {
+    switch (statName) {
+        case "hp":
+            return "#fb6c6c";
+        case "attack":
+            return "#ff7f11";
+        case "defense":
+            return "#ffce4b";
+        case "special-attack":
+            return "#59acf4";
+        case "special-defense":
+            return "#49d0b0";
+        case "speed":
+            return "#ff758f";
+        default:
+            return "#606160";
+    }
+};

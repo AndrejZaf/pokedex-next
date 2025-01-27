@@ -14,7 +14,7 @@ const KeyCharacteristics = ({ basePokemon, extendedPokemon }: {
     const abilities = basePokemon.abilities.map(pokemonAbility => pokemonAbility.ability.name).join(", ");
     const eggGroups = extendedPokemon.egg_groups.map(eggGroup => eggGroup.name).join(", ");
     return (
-        <div className="my-4">
+        <>
             <div className="text-xl font-semibold">Key Characteristics</div>
             <div className="grid grid-cols-2 gap-2 my-4">
                 <CharacteristicEntry label={"Habitat"} value={extendedPokemon.habitat.name} />
@@ -38,7 +38,7 @@ const KeyCharacteristics = ({ basePokemon, extendedPokemon }: {
                     <CharacteristicEntry label={"Groups"} value={eggGroups} />
                 </div>
             </div>
-        </div>
+        </>
     );
 };
 export default KeyCharacteristics;
