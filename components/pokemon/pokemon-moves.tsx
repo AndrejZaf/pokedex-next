@@ -1,19 +1,10 @@
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Pokemon } from "@/types";
 import React from "react";
-import {
-    Table,
-    TableBody,
-    TableCaption,
-    TableCell,
-    TableHead,
-    TableHeader,
-    TableRow,
-} from "@/components/ui/table"
 
 export const PokemonMoves = ({ pokemon }: { pokemon: Pokemon }) => {
-    console.log(pokemon);
     return (
-        <Table className="text-md">
+        <Table className="text-md my-4">
             <TableHeader>
                 <TableRow>
                     <TableHead className="font-bold">ID</TableHead>

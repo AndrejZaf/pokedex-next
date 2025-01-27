@@ -9,6 +9,10 @@ export type Pokemon = {
     name: string;
     types: PokemonType[];
     moves: PokemonMove[];
+    base_experience: number;
+    abilities: PokemonAbility[];
+    weight: number;
+    height: number;
 }
 
 
@@ -33,4 +37,37 @@ export type PokemonMove = {
 
 export type PokemonVersionGroupDetails = {
     level_learned_at: number;
+}
+
+export type ExtendedPokemon = {
+    base_happiness: number;
+    habitat: PokemonHabitat;
+    color: PokemonColor;
+    shape: PokemonShape;
+    egg_groups: PokemonEggGroup[];
+    gender_rate: number;
+}
+
+export type PokemonHabitat = {
+    name: string;
+}
+
+export type PokemonColor = {
+    name: string;
+}
+
+export type PokemonShape = {
+    name: string;
+}
+
+export type PokemonEggGroup = {
+    name: string;
+}
+
+export type Ability = {
+    name: string;
+}
+
+export type PokemonAbility = {
+    ability: Ability;
 }
