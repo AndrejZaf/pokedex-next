@@ -39,12 +39,12 @@ const PokemonPage = async ({ params }: { params: Promise<{ id: string }> }) => {
             </div>
             <div className="bg-inherit w-full rounded-t-3xl mt-[-40px] flex justify-center">
                 <Tabs defaultValue="about" className="mt-12">
-                    <TabsList className="space-x-72">
+                    <TabsList className="w-full space-x-72">
                         <TabsTrigger tabColor={pokemonColors.background} value="about">About</TabsTrigger>
                         <TabsTrigger tabColor={pokemonColors.background} value="base-stats">Base Stats</TabsTrigger>
                         <TabsTrigger tabColor={pokemonColors.background} value="moves">Moves</TabsTrigger>
                     </TabsList>
-                    <div className="max-w-3xl">
+                    <div className="w-full">
                         <TabsContent className="my-4" value="about">
                             <KeyCharacteristics basePokemon={basePokemon} extendedPokemon={extendedPokemon} />
                         </TabsContent>
