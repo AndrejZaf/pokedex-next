@@ -3,7 +3,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { PokemonMinified } from "@/types";
 import { determinePokemonColor } from "@/utils/color.util";
 import { pokemonColor } from "@/utils/pokemon-color.util";
-import React from "react";
 
 const PokemonCard = ({ pokemon, index }: { pokemon: PokemonMinified, index: number }) => {
     const color = pokemonColor[pokemon.name];

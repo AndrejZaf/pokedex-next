@@ -56,4 +56,5 @@ const PokemonPage = async ({ params }: { params: Promise<{ id: string }> }) => {
         </>
     );
 };
+
 export default PokemonPage;

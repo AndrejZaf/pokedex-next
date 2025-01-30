@@ -53,4 +53,5 @@ const PokedexPage = () => {
         </>
     );
 };
+
 export default PokedexPage;

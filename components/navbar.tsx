@@ -6,21 +6,20 @@ import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTr
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import { MenuIcon } from "lucide-react";
 import Link from "next/link";
-import React from "react";
 
 const navigation = [
     {
         href: "/",
-        label: "Home"
+        label: "Home",
     },
     {
         href: "/pokedex",
-        label: "Pokedex"
+        label: "Pokedex",
     },
     {
         href: "/about",
-        label: "About"
-    }
+        label: "About",
+    },
 ];
 
 const Navbar = () => {
