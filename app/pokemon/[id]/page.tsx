@@ -18,7 +18,7 @@ const PokemonPage = async ({ params }: { params: Promise<{ id: string }> }) => {
     const extendedPokemon: ExtendedPokemon = await extendedData.json();
     return (
         <>
-            <div className="w-full px-12 pt-4 mt-4" style={{ backgroundColor: pokemonColors.background }}>
+            <div className="w-full px-4 md:px-12 pt-4 mt-4" style={{ backgroundColor: pokemonColors.background }}>
                 <div className="flex flex-col space-y-4">
                     <div>
                         <BackButton color={pokemonColors.badgeTextColor} />
@@ -37,9 +37,9 @@ const PokemonPage = async ({ params }: { params: Promise<{ id: string }> }) => {
                     </div>
                 </div>
             </div>
-            <div className="bg-inherit w-full rounded-t-3xl mt-[-40px] flex justify-center">
+            <div className="bg-inherit w-full rounded-t-3xl mt-[-50px] px-4 flex justify-center">
                 <Tabs defaultValue="about" className="mt-12">
-                    <TabsList className="w-full space-x-72">
+                    <TabsList className="w-full md:space-x-72">
                         <TabsTrigger tabColor={pokemonColors.background} value="about">About</TabsTrigger>
                         <TabsTrigger tabColor={pokemonColors.background} value="base-stats">Base Stats</TabsTrigger>
                         <TabsTrigger tabColor={pokemonColors.background} value="moves">Moves</TabsTrigger>
