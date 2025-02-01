@@ -1,5 +1,6 @@
 "use client";
 
+import Loading from "@/app/loading";
 import PokemonCard from "@/components/pokemon-card";
 import { PokemonMinified } from "@/types";
 import { getIndex } from "@/utils/url.util";
@@ -49,7 +50,7 @@ const PokedexPage = () => {
                     }),
                 )}
             </div>
-            <div ref={ref}>Load More</div>
+            <div ref={ref}><Loading /></div>
         </>
     );
 };
