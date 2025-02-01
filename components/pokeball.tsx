@@ -1,6 +1,6 @@
 const Pokeball = () => {
     return (
-        <div className="relative w-full pt-[35%]">
+        <div className="h-full w-full flex justify-center items-center">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                 <div className="relative w-[200px] h-[200px] bg-white border-[10px] border-black rounded-full
                             overflow-hidden shadow-[inset_-10px_10px_0_10px_#ccc] animate-shake
