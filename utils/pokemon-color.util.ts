@@ -47,7 +47,8 @@ export const pokemonColor: Record<string, string> = {
 
     // Blue Pokémon
     squirtle: "blue",
-    nidoranF: "blue",
+    poliwhirl: "blue",
+    "nidoran-f": "blue",
     oddish: "blue",
     poliwag: "blue",
     tentacool: "blue",

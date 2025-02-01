@@ -50,7 +50,7 @@ const PokedexPage = () => {
                     }),
                 )}
             </div>
-            <div ref={ref}><Loading /></div>
+            <div ref={ref}>Load more</div>
         </>
     );
 };
