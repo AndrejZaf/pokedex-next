@@ -17,9 +17,9 @@ const KeyCharacteristics = ({ basePokemon, extendedPokemon }: {
         <>
             <div className="text-xl font-semibold">Key Characteristics</div>
             <div className="grid grid-cols-2 gap-2 my-4">
-                <CharacteristicEntry label={"Habitat"} value={extendedPokemon.habitat.name} />
-                <CharacteristicEntry label={"Shape"} value={extendedPokemon.shape.name} />
-                <CharacteristicEntry label={"Color"} value={extendedPokemon.color.name} />
+                {extendedPokemon.habitat && <CharacteristicEntry label={"Habitat"} value={extendedPokemon.habitat.name} />}
+                {extendedPokemon.shape && <CharacteristicEntry label={"Shape"} value={extendedPokemon.shape.name} />}
+                {extendedPokemon.color && <CharacteristicEntry label={"Color"} value={extendedPokemon.color.name} />}
                 <CharacteristicEntry label={"Height"}
                                      value={`${heightCalculation.meters} m - ${heightCalculation.feet} ft`} />
                 <CharacteristicEntry label={"Weight"}
