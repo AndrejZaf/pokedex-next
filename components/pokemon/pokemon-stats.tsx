@@ -3,7 +3,7 @@ import { Pokemon } from "@/types";
 import { determineStatColor } from "@/utils/pokemon-color.util";
 import { highestPokemonStats } from "@/utils/pokemon.util";
 
-const Stats = ({ pokemon }: { pokemon: Pokemon }) => {
+const PokemonStats = ({ pokemon }: { pokemon: Pokemon }) => {
     const totalStats = pokemon.stats.reduce((acc, stat) => acc + stat.base_stat, 0);
     return (
         <>
@@ -26,4 +26,4 @@ const Stats = ({ pokemon }: { pokemon: Pokemon }) => {
         </>
     );
 };
-export default Stats;
+export default PokemonStats;

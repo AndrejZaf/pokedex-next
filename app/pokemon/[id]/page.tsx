@@ -1,11 +1,11 @@
 import BackButton from "@/components/back-button";
 import KeyCharacteristics from "@/components/pokemon/key-characteristics";
 import { PokemonMoves } from "@/components/pokemon/pokemon-moves";
-import Stats from "@/components/pokemon/stats";
+import PokemonStats from "@/components/pokemon/pokemon-stats";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ExtendedPokemon, Pokemon } from "@/types";
-import { determinePokemonColor } from "@/utils/color.util";
+import { determinePokemonColor } from "@/utils/pokemon-color.util";
 import { pokemonColor } from "@/utils/pokemon-color.util";
 
 const PokemonPage = async ({ params }: { params: Promise<{ id: string }> }) => {
@@ -48,7 +48,7 @@ const PokemonPage = async ({ params }: { params: Promise<{ id: string }> }) => {
                         <TabsContent className="my-4" value="about">
                             <KeyCharacteristics basePokemon={basePokemon} extendedPokemon={extendedPokemon} />
                         </TabsContent>
-                        <TabsContent className="my-4" value="base-stats"><Stats pokemon={basePokemon} /></TabsContent>
+                        <TabsContent className="my-4" value="base-stats"><PokemonStats pokemon={basePokemon} /></TabsContent>
                         <TabsContent className="my-4" value="moves"><PokemonMoves pokemon={basePokemon} /></TabsContent>
                     </div>
                 </Tabs>

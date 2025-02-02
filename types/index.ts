@@ -3,6 +3,12 @@ export type PokemonMinified = {
     url: string;
 };
 
+export type PokemonDamageDealerData = {
+    id: number,
+    name: string,
+    description: string,
+    image: string,
+}
 
 export type Pokemon = {
     id: number;
