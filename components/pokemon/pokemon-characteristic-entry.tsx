@@ -1,4 +1,4 @@
-const CharacteristicEntry = ({ label, value }: { label: string, value: string }) => {
+const PokemonCharacteristicEntry = ({ label, value }: { label: string, value: string }) => {
     return (
         <>
             <div className="label text-lg text-gray-500">{label}</div>
@@ -6,4 +6,4 @@ const CharacteristicEntry = ({ label, value }: { label: string, value: string })
         </>
     );
 };
-export default CharacteristicEntry;
+export default PokemonCharacteristicEntry;

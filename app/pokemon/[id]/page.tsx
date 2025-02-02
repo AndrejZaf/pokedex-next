@@ -1,5 +1,5 @@
 import BackButton from "@/components/back-button";
-import KeyCharacteristics from "@/components/pokemon/key-characteristics";
+import PokemonKeyCharacteristics from "@/components/pokemon/pokemon-key-characteristics";
 import { PokemonMoves } from "@/components/pokemon/pokemon-moves";
 import PokemonStats from "@/components/pokemon/pokemon-stats";
 import { Badge } from "@/components/ui/badge";
@@ -46,7 +46,7 @@ const PokemonPage = async ({ params }: { params: Promise<{ id: string }> }) => {
                     </TabsList>
                     <div className="w-full">
                         <TabsContent className="my-4" value="about">
-                            <KeyCharacteristics basePokemon={basePokemon} extendedPokemon={extendedPokemon} />
+                            <PokemonKeyCharacteristics basePokemon={basePokemon} extendedPokemon={extendedPokemon} />
                         </TabsContent>
                         <TabsContent className="my-4" value="base-stats"><PokemonStats pokemon={basePokemon} /></TabsContent>
                         <TabsContent className="my-4" value="moves"><PokemonMoves pokemon={basePokemon} /></TabsContent>

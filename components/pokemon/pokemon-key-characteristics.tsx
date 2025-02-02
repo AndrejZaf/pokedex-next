@@ -1,10 +1,10 @@
-import CharacteristicEntry from "@/components/pokemon/characteristic-entry";
+import PokemonCharacteristicEntry from "@/components/pokemon/pokemon-characteristic-entry";
 import PokemonGender from "@/components/pokemon/pokemon-gender";
 import { ExtendedPokemon, Pokemon } from "@/types";
 import { calculateGenderPercentage, calculateHeight, calculateWeight } from "@/utils/pokemon.util";
 import React from "react";
 
-const KeyCharacteristics = ({ basePokemon, extendedPokemon }: {
+const PokemonKeyCharacteristics = ({ basePokemon, extendedPokemon }: {
     basePokemon: Pokemon,
     extendedPokemon: ExtendedPokemon
 }) => {
@@ -17,16 +17,16 @@ const KeyCharacteristics = ({ basePokemon, extendedPokemon }: {
         <>
             <div className="text-xl font-semibold">Key Characteristics</div>
             <div className="grid grid-cols-2 gap-2 my-4">
-                {extendedPokemon.habitat && <CharacteristicEntry label={"Habitat"} value={extendedPokemon.habitat.name} />}
-                {extendedPokemon.shape && <CharacteristicEntry label={"Shape"} value={extendedPokemon.shape.name} />}
-                {extendedPokemon.color && <CharacteristicEntry label={"Color"} value={extendedPokemon.color.name} />}
-                <CharacteristicEntry label={"Height"}
-                                     value={`${heightCalculation.meters} m - ${heightCalculation.feet} ft`} />
-                <CharacteristicEntry label={"Weight"}
-                                     value={`${weightCalculation.kgs} kg - ${weightCalculation.lbs} lbs`} />
-                <CharacteristicEntry label={"Abilities"} value={abilities} />
-                <CharacteristicEntry label={"Happiness"} value={`${extendedPokemon.base_happiness}`} />
-                <CharacteristicEntry label={"Experience"} value={`${basePokemon.base_experience}`} />
+                {extendedPokemon.habitat && <PokemonCharacteristicEntry label={"Habitat"} value={extendedPokemon.habitat.name} />}
+                {extendedPokemon.shape && <PokemonCharacteristicEntry label={"Shape"} value={extendedPokemon.shape.name} />}
+                {extendedPokemon.color && <PokemonCharacteristicEntry label={"Color"} value={extendedPokemon.color.name} />}
+                <PokemonCharacteristicEntry label={"Height"}
+                                            value={`${heightCalculation.meters} m - ${heightCalculation.feet} ft`} />
+                <PokemonCharacteristicEntry label={"Weight"}
+                                            value={`${weightCalculation.kgs} kg - ${weightCalculation.lbs} lbs`} />
+                <PokemonCharacteristicEntry label={"Abilities"} value={abilities} />
+                <PokemonCharacteristicEntry label={"Happiness"} value={`${extendedPokemon.base_happiness}`} />
+                <PokemonCharacteristicEntry label={"Experience"} value={`${basePokemon.base_experience}`} />
             </div>
             <div>
                 <div className="text-xl font-semibold my-4">Breeding</div>
@@ -35,10 +35,10 @@ const KeyCharacteristics = ({ basePokemon, extendedPokemon }: {
                     <div className="value text-lg">{genderCalculation.isGenderless ? "Genderless" :
                         <PokemonGender malePercentage={genderCalculation.malePercentage!}
                                        femalePercentage={genderCalculation.femalePercentage!} />}</div>
-                    <CharacteristicEntry label={"Groups"} value={eggGroups} />
+                    <PokemonCharacteristicEntry label={"Groups"} value={eggGroups} />
                 </div>
             </div>
         </>
     );
 };
-export default KeyCharacteristics;
+export default PokemonKeyCharacteristics;
