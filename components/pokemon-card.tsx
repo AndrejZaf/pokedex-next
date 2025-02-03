@@ -10,7 +10,7 @@ const PokemonCard = ({ pokemon, index }: { pokemon: PokemonMinified, index: numb
         <Card className="aspect-video hover:opacity-75 transition delay-75 duration-150 ease-in-out"
               style={{ backgroundColor: colorValues.background }}>
             <CardHeader>
-                <CardTitle className="capitalize font-semibold"
+                <CardTitle className="capitalize text-xl font-semibold"
                            style={{ color: colorValues.badgeTextColor }}>{pokemon.name}</CardTitle>
                 <CardDescription><Badge className="capitalize" style={{
                     backgroundColor: colorValues.badge,

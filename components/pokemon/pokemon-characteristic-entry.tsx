@@ -1,8 +1,8 @@
 const PokemonCharacteristicEntry = ({ label, value }: { label: string, value: string }) => {
     return (
         <>
-            <div className="label text-lg text-gray-500">{label}</div>
-            <div className="value text-lg capitalize">{value}</div>
+            <div className="label font-medium text-[#6c757d]">{label}</div>
+            <div className="value font-medium capitalize">{value}</div>
         </>
     );
 };
