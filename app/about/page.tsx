@@ -1,6 +1,12 @@
 import BentoGrid from "@/components/bento-grid";
 import { Button } from "@/components/ui/button";
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+    title: "About",
+    description: "About the project",
+};
 
 const AboutPage = () => {
     return (

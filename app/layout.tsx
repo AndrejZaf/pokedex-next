@@ -13,7 +13,10 @@ const robo = Roboto({
 
 
 export const metadata: Metadata = {
-    title: "Pokemon",
+    title: {
+        template: "%s | Pokemon",
+        default: "Pokemon"
+    },
     description: "Gotta catch em all",
 };
 

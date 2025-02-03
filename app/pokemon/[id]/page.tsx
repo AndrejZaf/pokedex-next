@@ -5,13 +5,28 @@ import PokemonStats from "@/components/pokemon/pokemon-stats";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ExtendedPokemon, Pokemon } from "@/types";
-import { determinePokemonColor } from "@/utils/pokemon-color.util";
-import { pokemonColor } from "@/utils/pokemon-color.util";
+import { determinePokemonColor, pokemonColor } from "@/utils/pokemon-color.util";
+import { Metadata } from "next";
+
+export async function generateMetadata(
+    { params }: { params: Promise<{ id: string }> },
+): Promise<Metadata> {
+    const id = (await params).id;
+    const pokemon = await getPokemon(id);
+    const pokemonName = pokemon.name[0].toUpperCase() + pokemon.name.slice(1);
+    return {
+        title: pokemonName,
+    };
+}
+
+const getPokemon = async (id: string): Promise<Pokemon> => {
+    const baseData = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
+    return await baseData.json();
+};
 
 const PokemonPage = async ({ params }: { params: Promise<{ id: string }> }) => {
     const { id } = await params;
-    const baseData = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
-    const basePokemon: Pokemon = await baseData.json();
+    const basePokemon = await getPokemon(id);
     const pokeColor = pokemonColor[basePokemon.name];
     const pokemonColors = determinePokemonColor(pokeColor);
     const extendedData = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${id}/`);
@@ -48,7 +63,8 @@ const PokemonPage = async ({ params }: { params: Promise<{ id: string }> }) => {
                         <TabsContent className="my-4" value="about">
                             <PokemonKeyCharacteristics basePokemon={basePokemon} extendedPokemon={extendedPokemon} />
                         </TabsContent>
-                        <TabsContent className="my-4" value="base-stats"><PokemonStats pokemon={basePokemon} /></TabsContent>
+                        <TabsContent className="my-4" value="base-stats"><PokemonStats
+                            pokemon={basePokemon} /></TabsContent>
                         <TabsContent className="my-4" value="moves"><PokemonMoves pokemon={basePokemon} /></TabsContent>
                     </div>
                 </Tabs>
