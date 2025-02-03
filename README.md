@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<p align="center">
+<img align="center" width="150" alt="Pokeball Logo" src="./public/pokeball-logo.svg" />
+</p>
+<h1 align="center" style="font-weight: bold;">Pokedex Next</h1>
 
-## Getting Started
+<p align="center">
+  <a href="#tech">Technologies</a> •
+  <a href="#started">Getting Started</a>
+</p>
 
-First, run the development server:
+<p align="center">
+    <b>Exploring NextJS by re-writing my very first React application - Pokedex which is a front end application consumes the Poke API.</b> 
+</p>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<p align="center">
+<img align="center" alt="Pokeball Logo" src="./public/chrome_TGFPhysk4K.gif" />
+</p>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<h2 id="technologies">💻 Technologies</h2>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- ![NextJS](https://img.shields.io/badge/Next.js-black?logo=next.js&logoColor=white)
+- ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=fff)
+- ![shadcn/ui](https://img.shields.io/badge/shadcn%2Fui-000?logo=shadcnui&logoColor=fff)
+- ![TailwindCSS](https://img.shields.io/badge/Tailwind%20CSS-%2338B2AC.svg?logo=tailwind-css&logoColor=white)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+<h2 id="started">🚀 Getting started</h2>
+<h3>Prerequisites</h3>
 
-## Learn More
+- [Node.js](https://nodejs.org/en/download/package-manager)
+- [TypeScript](https://www.npmjs.com/package/typescript)
 
-To learn more about Next.js, take a look at the following resources:
+<h3>Starting the Project</h3>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Clone the project, install the node dependencies by running `npm install` and then you can start the application with
+  `npm run dev`.
