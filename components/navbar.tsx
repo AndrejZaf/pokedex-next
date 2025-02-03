@@ -24,7 +24,7 @@ const navigation = [
 
 const Navbar = () => {
     return (
-        <div className="container mt-4 mx-auto flex items-center justify-between px-4 py-2 md:py-0">
+        <div className="container mt-4 mb-4 mx-auto flex items-center justify-between px-4 py-2 md:py-0">
             <Sheet>
                 <SheetTrigger asChild>
                     <Button variant="outline" size="icon" className="md:hidden">
