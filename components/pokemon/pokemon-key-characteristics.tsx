@@ -16,7 +16,7 @@ const PokemonKeyCharacteristics = ({ basePokemon, extendedPokemon }: {
     return (
         <>
             <div className="text-xl font-semibold">Key Characteristics</div>
-            <div className="grid grid-cols-2 gap-2 my-4">
+            <div className="grid grid-cols-2 gap-1 my-4">
                 {extendedPokemon.habitat && <PokemonCharacteristicEntry label={"Habitat"} value={extendedPokemon.habitat.name} />}
                 {extendedPokemon.shape && <PokemonCharacteristicEntry label={"Shape"} value={extendedPokemon.shape.name} />}
                 {extendedPokemon.color && <PokemonCharacteristicEntry label={"Color"} value={extendedPokemon.color.name} />}
@@ -30,7 +30,7 @@ const PokemonKeyCharacteristics = ({ basePokemon, extendedPokemon }: {
             </div>
             <div>
                 <div className="text-xl font-semibold my-4">Breeding</div>
-                <div className="grid grid-cols-2 gap-2">
+                <div className="grid grid-cols-2 gap-1">
                     <div className="label text-lg text-gray-500">Gender</div>
                     <div className="value text-lg">{genderCalculation.isGenderless ? "Genderless" :
                         <PokemonGender malePercentage={genderCalculation.malePercentage!}
