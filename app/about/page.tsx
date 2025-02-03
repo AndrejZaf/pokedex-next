@@ -5,7 +5,7 @@ import Link from "next/link";
 const AboutPage = () => {
     return (
         <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 lg:grid-cols-2 items-center content-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center content-center">
                 <div className="space-y-2">
                     <h2 className="text-3xl font-semibold">Pokemon - Gotta catch em all</h2>
                     <p className="text-justify">Imagine a world where interesting creatures that have powers roam free,
@@ -22,7 +22,7 @@ const AboutPage = () => {
                     </div>
                 </div>
                 <div>
-                    <img src="/pokeball-logo.svg" alt="Pokeball Logo" className="w-80 h-80 mx-auto" />
+                    <img src="/pokeball-logo.svg" alt="Pokeball Logo" className="w-52 lg:w-80 mx-auto" />
                 </div>
             </div>
             <BentoGrid />
