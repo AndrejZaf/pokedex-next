@@ -1,3 +1,4 @@
+import BentoGrid from "@/components/bento-grid";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
@@ -24,6 +25,7 @@ const AboutPage = () => {
                     <img src="/pokeball-logo.svg" alt="Pokeball Logo" className="w-80 h-80 mx-auto" />
                 </div>
             </div>
+            <BentoGrid />
         </div>
     );
 };
