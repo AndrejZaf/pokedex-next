@@ -9,7 +9,10 @@
 </p>
 
 <p align="center">
-    <b>Exploring NextJS by re-writing my very first React application - Pokedex which is a front end application consumes the Poke API.</b> 
+    <b>Exploring NextJS by re-writing my very first React application - Pokedex which is a front end application consumes the Poke API.
+        <br/>
+        You can find the react version here: <a href="https://github.com/AndrejZaf/pokedex-react">Pokedex React</a>
+    </b>
 </p>
 
 <p align="center">
@@ -26,7 +29,7 @@
 <h2 id="started">🚀 Getting started</h2>
 <h3>Prerequisites</h3>
 
-- [Node.js](https://nodejs.org/en/download/package-manager)
+- [Node.js](https://nodejs.org/en/download/package-manager) - **Node 22**
 - [TypeScript](https://www.npmjs.com/package/typescript)
 
 <h3>Starting the Project</h3>
