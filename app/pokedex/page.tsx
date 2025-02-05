@@ -7,11 +7,7 @@ export const metadata: Metadata = {
 };
 
 const PokedexPage = () => {
-    return (
-        <>
-            <PokedexGrid />
-        </>
-    );
+    return <PokedexGrid />;
 };
 
 export default PokedexPage;
