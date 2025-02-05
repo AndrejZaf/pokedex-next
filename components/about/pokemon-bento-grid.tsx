@@ -1,4 +1,4 @@
-export default function BentoGrid() {
+export default function PokemonBentoGrid() {
     return (
         <div className="mx-auto w-full mb-4">
             <div className="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
