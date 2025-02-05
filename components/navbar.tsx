@@ -6,23 +6,25 @@ import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTr
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import { MenuIcon } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const navigation = [
     {
         href: "/",
-        label: "Home",
+        label: "home",
     },
     {
         href: "/pokedex",
-        label: "Pokedex",
+        label: "pokedex",
     },
     {
         href: "/about",
-        label: "About",
+        label: "about",
     },
 ];
 
 const Navbar = () => {
+    const currentPath = usePathname();
     return (
         <div className="container mt-4 mb-4 mx-auto flex items-center justify-between px-4 py-2 md:py-0">
             <Sheet>
@@ -43,9 +45,8 @@ const Navbar = () => {
                     </VisuallyHidden>
                     <div className="grid p-4">
                         {navigation.map((item) =>
-                            <Link key={item.label} href={item.href}
-                                  className="transition-all delay-75 text-lg py-2 border-b-4 border-transparent">
-                                <div>
+                            <Link key={item.label} href={item.href}>
+                                <div className={`transition-all delay-75 text-lg py-2 border-b-4 border-transparent hover:border-red-300 capitalize ${currentPath === item.href && "border-red-400 hover:border-red-400"}`}>
                                     {item.label}
                                 </div>
                             </Link>)}
@@ -57,9 +58,8 @@ const Navbar = () => {
             </Link>
             <div className="hidden md:flex gap-4">
                 {navigation.map((item) =>
-                    <Link key={item.label} href={item.href}
-                          className="transition-all delay-75 text-lg py-2 border-b-4 border-transparent">
-                        <div>
+                    <Link key={item.label} href={item.href}>
+                        <div className={`transition-all delay-75 text-lg py-2 border-b-4 border-transparent hover:border-red-300 capitalize ${currentPath === item.href && "border-red-400 hover:border-red-400"}`}>
                             {item.label}
                         </div>
                     </Link>)}
