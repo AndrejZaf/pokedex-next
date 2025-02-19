@@ -46,7 +46,7 @@ const Navbar = () => {
                     <div className="grid p-4">
                         {navigation.map((item) =>
                             <Link key={item.label} href={item.href}>
-                                <div className={`transition-all delay-75 text-lg py-2 border-b-4 border-transparent hover:border-red-300 capitalize ${currentPath === item.href && "border-red-400 hover:border-red-400"}`}>
+                                <div style={{borderBottom: currentPath === item.href ? "4px solid #f87171" : ""}} className={`transition-all delay-75 text-lg py-2 border-b-4 border-transparent hover:border-red-300 capitalize ${currentPath === item.href && "border-red-400 hover:border-red-400"}`}>
                                     {item.label}
                                 </div>
                             </Link>)}
@@ -59,7 +59,7 @@ const Navbar = () => {
             <div className="hidden md:flex gap-4">
                 {navigation.map((item) =>
                     <Link key={item.label} href={item.href}>
-                        <div className={`transition-all delay-75 text-lg py-2 border-b-4 border-transparent hover:border-red-300 capitalize ${currentPath === item.href && "border-red-400 hover:border-red-400"}`}>
+                        <div style={{borderBottom: currentPath === item.href ? "4px solid #f87171" : ""}} className={`transition-all delay-75 text-lg py-2 border-b-4 border-transparent hover:border-red-300 capitalize ${currentPath === item.href && "border-red-400 hover:border-red-400"}`}>
                             {item.label}
                         </div>
                     </Link>)}
