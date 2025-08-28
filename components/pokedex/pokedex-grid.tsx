@@ -7,6 +7,7 @@ import Link from "next/link";
 import React, { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import useSWRInfinite from "swr/infinite";
+import Pokeball from "../pokeball";
 
 const fetcher = async (url: string) => {
   const response = await fetch(url);
@@ -39,6 +40,11 @@ const PokedexGrid = () => {
       setSize((prevSize) => prevSize + 1);
     }
   }, [inView, isValidating, setSize, isLoading]);
+
+  if (isLoading) {
+    return <Pokeball />;
+  }
+
   return (
     <>
       <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mt-4 px-8">
@@ -53,7 +59,7 @@ const PokedexGrid = () => {
           })
         )}
       </div>
-      <div ref={ref}>Load more</div>
+      {!isLoading && <div ref={ref}>Load more</div>}
     </>
   );
 };
