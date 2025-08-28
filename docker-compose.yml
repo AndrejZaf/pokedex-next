@@ -1,0 +1,7 @@
+services:
+  pokedex_next:
+    build: .
+    container_name: pokedex_next
+    restart: unless-stopped
+    ports:
+      - "3002:3000"
